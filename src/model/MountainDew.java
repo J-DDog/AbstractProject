@@ -2,7 +2,7 @@ package model;
 
 import javax.swing.JOptionPane;
 
-public class MountainDew extends Soda implements FoundOnTheInternet
+public class MountainDew extends Soda
 {
 	
 	public MountainDew()
@@ -22,7 +22,6 @@ public class MountainDew extends Soda implements FoundOnTheInternet
 	@Override
 	public int cat()
 	{
-		
 		return 0;
 	}
 
@@ -50,4 +49,14 @@ public class MountainDew extends Soda implements FoundOnTheInternet
 		}
 		JOptionPane.showMessageDialog(null, "BUY IT OR SUFFER");
 	}
+	
+	
+	
+	public String toString()
+	{
+		String descrip = "this is a " + this.getClass().getName() + " and has " + cat() + " cats.";
+				
+		return descrip;
+	}
+	
 }

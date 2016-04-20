@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Soda
+public abstract class Soda implements FoundOnTheInternet, Comparable
 {
 	private String brand;
 	private String color;
@@ -35,4 +35,29 @@ public abstract class Soda
 	{
 		this.liters = liters;
 	}
+	
+	public int compareTo(Object compared)
+	{
+		int comparedValue = Integer.MIN_VALUE;
+		
+		if(compared instanceof FoundOnTheInternet)
+		{
+			if(this.cat() > ((FoundOnTheInternet)compared).cat())
+			{
+				comparedValue = 1;
+			}
+			else if(this.cat() < ((FoundOnTheInternet)compared).cat())
+			{
+				comparedValue = -1;
+			}
+			else
+			{
+				comparedValue = 0;
+			}
+			
+		}
+		
+		return comparedValue;
+	}
+	
 }
