@@ -87,8 +87,8 @@ public class AbsController
 		String memes = "";
 		for(FoundOnTheInternet currentThing: internetThings)
 		{
-			memes.concat("This is a " + currentThing.toString()
-					+ " and has its meme is " + currentThing.meme() + "\n");
+			memes += currentThing.toString()
+					+ " and has its meme is " + currentThing.meme() + "\n";
 		}
 		
 		return memes;
